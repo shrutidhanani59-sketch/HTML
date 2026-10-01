@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <p>The <abbr title="">WHO</abbr> was founded in 1948.</p>
+
+<p>I love writing <abbr title="">HTML</abbr>!</p>
+    <p><abbr title="">SHRUTI</abbr></p>
+    <br>
+    <br>
+    <acronym title="National Aeronautics and Space Administration">NASA</acronym>
+    <br><br>
+    <address>
+    Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+  </address>
+
+  <br>
+  <main>
+  <article>
+    <h1>The History of Pizza</h1>
+    <p>Pizza has a long and storied history in Italy...</p>
+    
+    <aside>
+      <h4>Fun Fact!</h4>
+      <p>The world's largest pizza was over 122 feet in diameter.</p>
+    </aside>
+
+    <p>Modern pizza as we know it began in Naples...</p>
+  </article>
+</main>
+<p>Hi</p>
+
+<br>
+<ul>
+ <li>User <bdi>John</bdi>: 100 points</li>
+ <li>User <bdi>إيان</bdi>: 90 points</li>
+ <li>User <bdi>Sarah</bdi>: 80 points</li>
+</ul>
+<br>
+<p>This is normal text.</p>
+
+<p><bdo dir="rtl">This is reversed text.</bdo></p>
+<br>
+<p>In his famous speech, Martin Luther King Jr. said:</p>
+
+<blockquote cite="https://www.example.com/speeches">
+  "I have a dream that my four little children will one day live in a nation 
+  where they will not be judged by the color of their skin but by the 
+  content of their character."
+</blockquote>
+<br>
+<p>I was reading <cite>The Martian</cite> by Andy Weir yesterday.</p>
+
+<p>The painting <cite>The Scream</cite> was sold for nearly $120 million.</p>
+<br>
+<dialog id="myPopup">
+  <h2>Hello!</h2>
+  <p>This is a native HTML popup window.</p>
+  <button id="closeBtn">Close</button>
+</dialog>
+
+<button id="openBtn">Open Dialog</button>
+
+<script>
+  const dialog = document.getElementById('myPopup');
+  const openBtn = document.getElementById('openBtn');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Use .showModal() for a true popup
+  openBtn.onclick = () => dialog.showModal();
+  
+  // Use .close() to hide it
+  closeBtn.onclick = () => dialog.close();
+</script>
+</body>
+</html>

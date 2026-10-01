@@ -1,0 +1,112 @@
+.highlight {
+  /* Sets the shape of the mark (dot, circle, double-circle, triangle) */
+  text-emphasis-style: dot;
+  
+  
+  /* Sets the color of those marks */
+  text-emphasis-color: orange;
+  
+  /* Optional: Sets the position (over or under the text) */
+  text-emphasis-position: over right;
+}
+
+/* .custom-list { */
+  /* Use a URL to point to your icon or image */
+  /* list-style-image: url('https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp');
+  height: 100px;
+  width: 100px; */
+  
+  /* Fallback: If the image fails to load, show a square */
+  /* list-style-type: square; */
+/* } */
+/* After the heading is read, the screen reader pauses for 1 second */
+.alert-message {
+  animation: fadeIn 1s;
+  animation-delay: 200ms; /* Waits before starting */
+}
+
+.container {
+  width: 500px;
+  height: 300px;
+  border: 2px solid #ccc;
+  position: relative;
+}
+
+.moving-ball {
+
+
+  /* Define the path the ball should follow */
+  offset-path: path('M 100 00 Q 50 00 00 150');
+  
+  /* Where along the path it should be (0% to 100%) */
+  offset-distance: 0%;
+  
+
+  /* Animate it! */
+  animation: moveAlongPath 2s infinite alternate ease-in-out;
+}
+.moving-ball img
+{
+    height: 100px;
+    width: 100px;
+}
+
+@keyframes moveAlongPath {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+.grid-container {
+  display: grid;
+  /* Defines 3 columns: sidebar (200px), main (flexible), and a gap */
+  grid-template-columns: 200px 1fr;
+  /* Defines 3 rows: auto-sized header, flexible main, auto-sized footer */
+  grid-template-rows: auto 1fr auto;
+  gap: 15px;
+  height: 100vh;
+  
+  /* Visualizing the layout layout */
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+/* Assigning items to the areas defined above */
+.header { grid-area: header; background: #34495e; }
+.sidebar { grid-area: sidebar; background: #ecf0f1; color: #333; }
+.main { grid-area: main; background: #3498db; }
+.footer { grid-area: footer; background: #2c3e50; }
+
+/* General styling for visibility */
+.grid-item {
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+  padding: 10px;
+  gap: 10px;
+}
+
+.item {
+  padding: 20px;
+  background-color: #3498db;
+  color: white;
+}
+
+.dynamic {
+  /* This item will eat up all the empty space in the row */
+  flex-grow: 1; 
+  background-color: #2ecc71;
+}
+
+.short {
+  /* These stay as small as their text allows */
+  flex-grow: 0; 
+}
